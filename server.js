@@ -30,6 +30,7 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/books-to-read";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.Promise = Promise;
 
 // Routes
 
